@@ -3,7 +3,11 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import Header, { LogoLink, NavLinks, NavLink as NavLinkBase } from "../headers/light.js";
+import Header, {
+  LogoLink,
+  NavLinks,
+  NavLink as NavLinkBase,
+} from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
   ${tw`justify-between`}
@@ -48,7 +52,7 @@ export default ({
       <NavLink href="#">Blog</NavLink>
       <NavLink href="#">Pricing</NavLink>
       <NavLink href="#">Login</NavLink>
-    </NavLinks>
+    </NavLinks>,
   ],
   heading = (
     <>
@@ -59,16 +63,16 @@ export default ({
     </>
   ),
   description = "We've been in the hotels business across the world for 5 years now. We assure you that you will always enjoy your stay with us.",
-  primaryActionUrl = "#",
-  primaryActionText = "Sign Up",
+  primaryActionUrl = "/place-hotel",
+  primaryActionText = "Place Hotel",
   secondaryActionUrl = "#",
-  secondaryActionText = "Search Hotels"
+  secondaryActionText = "Search Hotels",
 }) => {
   return (
     <Container>
+      <StyledHeader links={navLinks} collapseBreakpointClass="sm" />
       <TwoColumn>
         <LeftColumn>
-          <StyledHeader links={navLinks} collapseBreakpointClass="sm" />
           <Content>
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
