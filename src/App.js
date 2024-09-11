@@ -107,6 +107,7 @@ import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CreateAdvertisement from "demos/CreateAdvertisement";
+import TwoColContactUsWithIllustrationFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -129,6 +130,10 @@ export default function App() {
           <Route path="/" element={<HotelTravelLandingPage />} />
           <Route path="/demo" element={<MainLandingPage />} />
           <Route path="/create" element={<CreateAdvertisement />} />
+          <Route
+            path="/create2"
+            element={<TwoColContactUsWithIllustrationFullForm />}
+          />
         </Routes>
       </Router>
     </>
